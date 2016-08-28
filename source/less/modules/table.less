@@ -1,0 +1,21 @@
+.table {
+    display: table;
+    width: 100%;
+    
+    .table-row { display: table-row; }
+    .table-cell {
+        display: table-cell;
+        text-align: left;
+        vertical-align: top;
+     
+        &.h-left { text-align: left; }
+        &.h-right { text-align: right; }
+        &.h-center { text-align: center; }
+        &.v-top { vertical-align: top; }
+        &.v-bottom { vertical-align: bottom; }
+        &.v-center { vertical-align: middle; }
+        
+        &.expand { width: 100%; }
+        &.half { width: 50%; }
+    }
+}

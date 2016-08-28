@@ -1,0 +1,43 @@
+.jnr-logo {
+	display: block;
+	width: 50%;
+	max-width: 300px;
+	margin: 1vw auto 8vw;
+	padding: 2vw;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 2vw @color-master-dark, 0 0 0 5vw @color-master-gray-light;
+}
+.jnr-logo.top {
+	display: none;
+	position: absolute;
+	top: 0; left: 50%;
+	transform: translateX(-50%);
+	width: 7%;
+	margin: 1vw 0 0;
+	padding: 0.3vw;
+	box-shadow: 0 0 0 0.3vw @color-master-dark, 0 0 1vw rgba(0,0,0,0.5);
+	z-index: 10;
+}
+
+// Medium
+@media (min-width: @breakpoint-md-min) and (max-width: @breakpoint-md-max) {
+	.jnr-logo {
+		margin: 0 auto 10vw;
+	}
+}
+
+// Large
+@media (min-width: @breakpoint-lg-min) and (max-width: @breakpoint-lg-max) {
+	.jnr-logo {
+		box-shadow: 0 0 0 1.5vw @color-master-dark, 0 0 0 3vw @color-master-gray-light;
+	}
+}
+// X-Large
+@media (min-width: @breakpoint-xl-min) {
+	.jnr-logo { display: none; }
+	.jnr-logo.top { display: block; }
+
+	.header section { padding-top: 10vw; }
+	.header section:first-of-type { padding-top: 8.5vw; }
+}

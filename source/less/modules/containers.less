@@ -1,0 +1,81 @@
+.section00 { margin-bottom: 0; }
+
+section {
+	position: relative;
+	padding: @measure-default-padding * 3 @measure-default-padding * 2;
+	clear: both;
+	box-shadow: inset -2em -2em 2em rgba(0,0,0,0.025), inset -0.5em -0.5em 1em rgba(0,0,0,0.05);
+
+	h2, .title {
+		margin-bottom: 0.4em;
+		padding-bottom: 0.25em;
+		border-bottom: 4px solid rgba(255,255,255,0.07);
+	}
+
+	&.header,
+	&.strengths {
+		background-color: #fff;
+
+		.prominent { color: @color-master-gray-dark; }
+		h2 { border-color: fade(@color-master-gray-dark, 7%); }
+		.title { padding-bottom: 0.6em; border-color: fade(@color-master-gray-dark, 5%); }
+	}
+
+	&.goal,
+	&.history {
+		color: @color-master-gray-light;
+		background-color: @color-master-medium;
+
+		.prominent { color: #fff; }
+		[class*="icon-"]::before { color: @color-master-medium; background-color: #fff; }
+		h2 { border-color: rgba(255,255,255,0.12); }
+	}
+
+	&.tools {
+		background-color: @color-master-light;
+
+		.prominent { color: @color-master-gray-dark; }
+		[class*="icon-"]::before { color: @color-master-light; background-color: @color-master-dark; }
+		h2 { border-color: fade(@color-master-dark, 10%); }
+	}
+
+	&.languages {
+		color: @color-master-gray-light;
+		background-color: @color-master-dark;
+
+		.prominent { color: #fff; }
+		[class*="icon-"]::before { color: @color-master-dark; background-color: #fff; }
+	}
+}
+
+.content-container { max-width: 55em; margin: 0 auto; }
+
+@media (min-width: @breakpoint-xl-min) {
+
+	section { height: 33.333333vh; }
+}
+
+@media (max-width: @breakpoint-lg-max) {
+
+	section.table-cell.table-cell.table-cell { display: block; width: 100%; }
+}
+
+@media (max-width: @breakpoint-md-max) {
+
+	.content-container.content-container {
+		.table-cell.table-cell {
+			display: block;
+			text-align: center;
+
+			li { text-align: left; }
+			i::before { display: inline-block; font-size: 1.5em; margin: 0 0 1em; }
+		}
+	}
+}
+
+@media (max-width: @breakpoint-sm-max) {
+
+	section {
+		padding: @measure-default-padding * 1.5 @measure-default-padding;
+	}
+}
