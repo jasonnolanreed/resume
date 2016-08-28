@@ -2,8 +2,13 @@
   "name": "jasonnolanreed",
   "version": "0.1.0",
   "devDependencies": {
+    "concurrently": "^2.2.0",
     "grunt": "^1.0.1",
     "grunt-contrib-less": "^1.4.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "lite-server": "^2.2.2"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/concurrently './node_modules/.bin/grunt' './node_modules/.bin/lite-server'"
   }
 }
