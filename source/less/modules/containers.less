@@ -9,7 +9,7 @@ section {
 	h2, .title {
 		margin-bottom: 0.4em;
 		padding-bottom: 0.25em;
-		border-bottom: 4px solid rgba(255,255,255,0.07);
+		border-bottom: 4px solid #fff;
 	}
 
 	&.header,
@@ -17,8 +17,8 @@ section {
 		background-color: #fff;
 
 		.prominent { color: @color-master-gray-dark; }
-		h2 { border-color: fade(@color-master-gray-dark, 7%); }
-		.title { padding-bottom: 0.6em; border-color: fade(@color-master-gray-dark, 5%); }
+		h2 { border-color: @color-master-gray-dark; }
+		.title { padding-bottom: 0.6em; border-color: @color-master-gray-dark; }
 	}
 
 	&.goal,
@@ -28,7 +28,6 @@ section {
 
 		.prominent { color: #fff; }
 		[class*="icon-"]::before { color: @color-master-medium; background-color: #fff; }
-		h2 { border-color: rgba(255,255,255,0.12); }
 	}
 
 	&.tools {
@@ -36,7 +35,7 @@ section {
 
 		.prominent { color: @color-master-gray-dark; }
 		[class*="icon-"]::before { color: @color-master-light; background-color: @color-master-dark; }
-		h2 { border-color: fade(@color-master-dark, 10%); }
+		h2 { border-color: @color-master-dark; }
 	}
 
 	&.languages {
@@ -51,17 +50,14 @@ section {
 .content-container { max-width: 55em; margin: 0 auto; }
 
 @media (min-width: @breakpoint-xl-min) {
-
 	section { height: 33.333333vh; }
 }
 
 @media (max-width: @breakpoint-lg-max) {
-
 	section.table-cell.table-cell.table-cell { display: block; width: 100%; }
 }
 
 @media (max-width: @breakpoint-md-max) {
-
 	.content-container.content-container {
 		.table-cell.table-cell {
 			display: block;
@@ -74,7 +70,6 @@ section {
 }
 
 @media (max-width: @breakpoint-sm-max) {
-
 	section {
 		padding: @measure-default-padding * 1.5 @measure-default-padding;
 	}
